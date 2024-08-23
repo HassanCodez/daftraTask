@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>IZAM</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logoNsearch">
+        <h1 class="logo">I<span class="z">Z</span>AM</h1>
+        <div class="searchBar">
+          <i class="bi bi-search searchIcon"></i>
+          <input
+            class="searchInput"
+            type="text"
+            placeholder="Search by name, job title..."
+          />
+        </div>
+      </div>
+      <div class="tabsContainer">
+        <span class="tab">
+          <i class="bi bi-house-door"></i>
+          <h3>home</h3>
+        </span>
+        <span class="tab">
+          <i class="bi bi-briefcase-fill"></i>
+          <h3>jobs</h3>
+        </span>
+        <span class="tab">
+          <i class="bi bi-people"></i>
+          <h3>employees</h3>
+        </span>
+        <hr class="divider" />
+        <span class="tab">
+          <i class="bi bi-bell"></i>
+          <h3>notifications</h3>
+        </span>
+        <span class="iconWithBadge tab">
+          <i class="bi bi-chat-left"></i>
+          <span class="badge">1</span>
+          <h3>messaging</h3>
+        </span>
+        <span class="tab">
+          <image
+            class="profile"
+            src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+            alt="profile"
+          />
+          <h3>profile<i class="bi bi-caret-down-fill"></i></h3>
+        </span>
+      </div>
+      <div class="responsiveNav">
+        <span class="responsiveProfile">
+          <image
+            class="profile"
+            src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg"
+            alt="profile"
+          />
+          <i class="bi bi-list"></i>
+        </span>
+        <i class="bi bi-search searchIcon"></i>
+      </div>
+    </nav>
+    <main>
+      <!--  -->
+      <aside>
+        <i class="bi bi-gear"></i>
+        <ul class="menu">
+          <li class="menuItem">dashboard</li>
+          <li class="menuItem">
+            job applications <i class="bi bi-chevron-down"></i>
+          </li>
+          <li class="menuItem">companies <i class="bi bi-chevron-up"></i></li>
+          <ul class="subMenu">
+            <li class="menuItem">tanQeeb</li>
+            <li class="menuItem">daftra</li>
+          </ul>
+          <li class="menuItem">settings <i class="bi bi-chevron-down"></i></li>
+          <li class="menuItem">logout</li>
+        </ul>
+      </aside>
+      <section>
+        <div class="sorting">
+          <span>Sorting by:</span>
+          <span class="sortItem"
+            >Top match <i class="bi bi-chevron-down"></i
+          ></span>
+        </div>
+        <div class="jobAlert">
+          <span>
+            <h4>UI Designer in Egypt</h4>
+            <p>70 Job positions</p>
+          </span>
+          <span class="switchWithLabel">
+            Set alert
+            <label class="switch">
+              <input type="checkbox" checked />
+              <span class="slider round"></span>
+            </label>
+          </span>
+        </div>
+      </section>
+
+      <section>test</section>
+    </main>
+  </body>
+</html>
