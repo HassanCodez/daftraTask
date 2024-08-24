@@ -86,13 +86,16 @@
           <li class="menuItem">logout</li>
         </ul>
       </aside>
-      <section>
+      <section class="mainSection">
         <div class="sorting">
           <span>Sorting by:</span>
           <span class="sortItem"
             >Top match <i class="bi bi-chevron-down"></i
           ></span>
         </div>
+        <button class="companies" onclick="openDrawer()">
+          Companies<i class="bi bi-list-nested"></i>
+        </button>
         <div class="jobAlert">
           <span>
             <h4>UI Designer in Egypt</h4>
@@ -106,9 +109,119 @@
             </label>
           </span>
         </div>
+        <div class="jobCard">
+          <div class="mainCardSection">
+            <img
+              src="https://e7.pngegg.com/pngimages/779/61/png-clipart-logo-idea-cute-eagle-leaf-logo.png"
+              alt="company logo"
+              class="companyLogo"
+            />
+            <span class="jobTitleNcompany">
+              <h4 class="jobTitle">Gaming UI designer</h4>
+              <span class="companyName">Rockstar Games</span>
+            </span>
+          </div>
+          <div class="locationNdate">
+            <span><i class="bi bi-geo"></i> ElMansoura, Egypt</span>
+            <span><i class="bi bi-calendar"></i> 10 days ago</span>
+          </div>
+          <div class="tagsContainer">
+            <span class="tag">0 - 3y of exp</span>
+            <span class="tag">Full time</span>
+            <span class="tag">Remote</span>
+          </div>
+          <hr class="divider" />
+          <div class="text-sm gray">
+            <span>Creative / Design</span> -
+            <span>IT / Software development</span> - <span>Gaming</span>
+          </div>
+        </div>
       </section>
 
-      <section>test</section>
+      <aside class="jobDesc">
+        <div class="jobDescHeader">
+          <span>
+            <img
+              src="https://e7.pngegg.com/pngimages/779/61/png-clipart-logo-idea-cute-eagle-leaf-logo.png"
+              alt="company logo"
+              class="companyLogo"
+            />
+            <span class="companyName">Rockstar Games</span>
+          </span>
+          <span>
+            <i class="bi bi-share"></i>
+            <i class="bi bi-three-dots"></i>
+          </span>
+        </div>
+        <h4 class="jobTitle">Gaming UI designer</h4>
+
+        <div class="locationNdate">
+          <span><i class="bi bi-geo"></i> ElMansoura, Egypt</span>
+          <span><i class="bi bi-calendar"></i> 10 days ago</span>
+          <span
+            ><i class="bi bi-file-earmark-medical"></i> 100 applications</span
+          >
+        </div>
+        <div class="tagsContainer">
+          <span class="tag">Full time</span>
+          <span class="tag">Remote</span>
+        </div>
+        <span>
+          <i class="bi bi-check-circle-fill"></i>
+          <span>5 of 6 skills match with you - you may be a good fit</span>
+        </span>
+        <span class="ctaContainer">
+          <button class="applyBtn">Apply for job</button>
+          <i class="bi bi-heart-fill"></i>
+        </span>
+        <hr class="divider" />
+        <h4>Job details</h4>
+        <div class="jobDetailsItem">
+          Years of experience: <span>0 - 3 years</span>
+        </div>
+        <div class="jobDetailsItem">
+          Educational level: <span>Bachelor degree</span>
+        </div>
+        <div class="jobDetailsItem">
+          Career level: <span>Mid - senior</span>
+        </div>
+        <div class="jobDetailsItem">salary: <span>20k - 25k EGP</span></div>
+        <div class="jobDetailsItem">
+          Category:
+          <span>Creative / Design - IT / Software development - Gaming</span>
+        </div>
+      </aside>
     </main>
+    <div id="drawer" class="drawer">
+      <div class="drawerCTA">
+        <button id="back" class="backBtn" onclick="closeDrawer()">
+          <i class="bi bi-arrow-left"></i>
+        </button>
+        <i class="bi bi-gear"></i>
+      </div>
+      <ul class="menu">
+        <li class="menuItem">dashboard</li>
+        <li class="menuItem">
+          job applications <i class="bi bi-chevron-down"></i>
+        </li>
+        <li class="menuItem">companies <i class="bi bi-chevron-up"></i></li>
+        <ul class="subMenu">
+          <li class="menuItem">tanQeeb</li>
+          <li class="menuItem">daftra</li>
+        </ul>
+        <li class="menuItem">settings <i class="bi bi-chevron-down"></i></li>
+        <li class="menuItem">logout</li>
+      </ul>
+    </div>
+    <script>
+      const drawer = document.getElementById("drawer");
+      const back = document.getElementById("back");
+      const closeDrawer = () => {
+        drawer.classList.remove("open");
+      };
+      const openDrawer = () => {
+        drawer.classList.add("open");
+      };
+    </script>
   </body>
 </html>
