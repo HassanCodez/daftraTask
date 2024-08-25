@@ -323,6 +323,35 @@ input:checked + .slider:before {
   color: gray;
 }
 
+.pagination {
+  display: none;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-link {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.page-link:hover {
+  background-color: #f0f0f0;
+}
+
+.page-link.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
 .jobDesc {
   background: white;
   min-height: 70vh;
@@ -389,15 +418,18 @@ input:checked + .slider:before {
 }
 
 .drawer {
-  display: none;
-  transform: translateX(101%);
-  transition: transform 0.3s ease-in-out;
+  position: fixed;
+  right: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background: #f7f7f7;
-  position: absolute;
-  right: 0;
-  top: 0;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* Prevents interaction when hidden */
 }
 .drawerCTA {
   display: flex;
@@ -407,6 +439,9 @@ input:checked + .slider:before {
 }
 .open {
   transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto; /* Allows interaction when visible */
 }
 .backBtn {
   background: transparent;
@@ -424,9 +459,7 @@ input:checked + .slider:before {
   .sorting {
     display: none;
   }
-  .drawer {
-    display: block;
-  }
+
   .companies {
     width: 95%;
     display: flex;
@@ -455,9 +488,13 @@ input:checked + .slider:before {
   .jobDesc {
     display: none;
   }
+  .pagination {
+    display: flex;
+  }
 
   body {
     background: white;
+    overflow-x: hidden;
   }
   main {
     display: grid;
