@@ -40,7 +40,7 @@ const Sidebar = () => {
   );
 
   async function fetchNav() {
-    let res = await fetch("http://localhost:8081/nav");
+    let res = await fetch("https://daftra-api.vercel.app/nav");
     let data = await res.json();
     setNav(data);
   }
@@ -53,7 +53,7 @@ const Sidebar = () => {
     console.log("🚀 ~ handleDragEnd ~ event:", event);
     const { active, over } = event;
     if (active && over) {
-      fetch("http://localhost:8081/track", {
+      fetch("https://daftra-api.vercel.app/track", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -76,7 +76,7 @@ const Sidebar = () => {
   }
 
   const updateNav = () => {
-    fetch("http://localhost:8081/nav", {
+    fetch("https://daftra-api.vercel.app/nav", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
